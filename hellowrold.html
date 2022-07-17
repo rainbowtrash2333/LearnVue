@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Hello World</title>
 </head>
 <body>
-$END$
+<div id="counter">
+    <p>num: {{ num }}</p>
+    <p>uname: {{ uname }}</p>
+</div>
+<script>
+    const Counter = {//配置对象
+        data:function () {
+            return {
+                num:0,
+                uname:"Twikura"
+            }
+        }
+    }
+    let app = Vue.createApp(Counter).mount("#counter")//创建应用，将配置对象传入
+    console.log(app)
+</script>
 </body>
 </html>
